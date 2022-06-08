@@ -10,7 +10,7 @@ const lambda = async (event, context) => {
         const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
         const response = `Generated number ${randomNumber}`;
 
-        console.log('Remaining time: ', context.getRemainingTimeInMillis());
+        console.log('Remaining time: ', context?.getRemainingTimeInMillis());
         return response;
     } catch (error) {
         console.error(error);
